@@ -1,5 +1,8 @@
 package com.flocasts.rs;
 
+import com.flocasts.dao.UserRepository;
+import com.flocasts.dao.impl.UserRepositoryHibernateImpl;
+import com.flocasts.model.User;
 import com.sun.jersey.api.container.httpserver.HttpServerFactory;
 import com.sun.net.httpserver.HttpServer;
 
@@ -11,18 +14,25 @@ import java.io.IOException;
 /**
  * Created with IntelliJ IDEA.
  * User: jorubio
- * Date: 2/9/14
+ * Date: 2/14/14
  * Time: 6:19 PM
  * To change this template use File | Settings | File Templates.
  */
-// The Java class will be hosted at the URI path "/helloworld"
 @Path("/users")
 public class UserService {
-    // The Java method will process HTTP GET requests
+
     @GET
-    // The Java method will produce content identified by the MIME Media type "text/plain"
     @Produces("application/json")
-    public String getVideos() {
+    public String getUsers() {
+
+        UserRepository repo = new UserRepositoryHibernateImpl();
+
+        User user = new User();
+        user.setFirstName("Jose");
+        user.setLastName("Rubio");
+
+        repo.save(user);
+
         // Return some cliched textual content
         return "Hello World";
     }

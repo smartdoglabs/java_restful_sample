@@ -19,7 +19,7 @@ public class Server {
         server.start();
 
         System.out.println("Server running");
-        System.out.println("Visit: http://localhost:9998/helloworld");
+        System.out.println("Visit: http://localhost:9998/");
         System.out.println("Hit return to stop...");
         System.in.read();
         System.out.println("Stopping server");

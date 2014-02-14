@@ -12,7 +12,7 @@ USE `flocasts` ;
 DROP TABLE IF EXISTS `flocasts`.`video` ;
 
 CREATE TABLE IF NOT EXISTS `flocasts`.`video` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `title` VARCHAR(45) NULL,
   `url` VARCHAR(45) NULL,
   `length` INT NULL,
@@ -32,7 +32,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `flocasts`.`user` ;
 
 CREATE TABLE IF NOT EXISTS `flocasts`.`user` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `email_address` VARCHAR(45) NULL,
   `first_name` VARCHAR(45) NULL,
   `last_name` VARCHAR(45) NULL,
@@ -50,7 +50,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `flocasts`.`event` ;
 
 CREATE TABLE IF NOT EXISTS `flocasts`.`event` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `session_id` VARCHAR(255) NULL,
   `type` VARCHAR(45) NOT NULL,
   `agent` VARCHAR(100) NULL,

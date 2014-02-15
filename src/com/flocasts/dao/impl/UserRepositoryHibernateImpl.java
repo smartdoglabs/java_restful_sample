@@ -22,6 +22,8 @@ public class UserRepositoryHibernateImpl implements UserRepository {
 
         session.getTransaction().commit();
 
+        user = HibernateUtil.initializeAndUnproxy(user);
+
         session.close();
 
         return user;
@@ -30,8 +32,38 @@ public class UserRepositoryHibernateImpl implements UserRepository {
     }
 
     @Override
+    public void update(User user) {
+        SessionFactory sf = HibernateUtil.getSessionFactory();
+        Session session = sf.openSession();
+
+        session.beginTransaction();
+        session.update(user);
+        session.getTransaction().commit();
+
+        HibernateUtil.initializeAndUnproxy(user);
+
+        session.close();
+
+
+
+    }
+
+    @Override
     public User loadById(Integer id) {
-        return null;
+        SessionFactory sf = HibernateUtil.getSessionFactory();
+        Session session = sf.openSession();
+
+        session.beginTransaction();
+
+        User user = (User) session.load(User.class,id);
+
+        session.getTransaction().commit();
+
+        user = HibernateUtil.initializeAndUnproxy(user);
+
+        session.close();
+
+        return user;
     }
 
 }

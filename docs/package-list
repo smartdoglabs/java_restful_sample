@@ -1,0 +1,8 @@
+com.flocasts.bootstrap
+com.flocasts.client
+com.flocasts.dao
+com.flocasts.dao.impl
+com.flocasts.engine
+com.flocasts.model
+com.flocasts.rs
+com.flocasts.util

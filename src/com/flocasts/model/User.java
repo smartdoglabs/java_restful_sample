@@ -1,22 +1,23 @@
 package com.flocasts.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import org.hibernate.FetchMode;
+import org.hibernate.annotations.Fetch;
+
+import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
+import java.util.Date;
 
 /**
  * Created with IntelliJ IDEA.
  * User: jorubio
  * Date: 2/9/14
  * Time: 7:59 PM
- * To change this template use File | Settings | File Templates.
+ *
+ * The user model
  */
-
-
 @Entity
 @Table(name="user")
+@XmlRootElement(name="user")
 public class User {
 
     @Id
@@ -28,6 +29,18 @@ public class User {
 
     @Column(name="last_name")
     private String lastName;
+
+    @Column(name="password")
+    private byte[] password;
+
+    @Column(name="interests")
+    private String interests;
+
+    @Column(name="create_date")
+    private Date createDate;
+
+    @Column(name="lcts")
+    private Date lcts;
 
     public User() {
 
@@ -57,4 +70,35 @@ public class User {
         this.lastName = lastName;
     }
 
+    public byte[] getPassword() {
+        return password;
+    }
+
+    public void setPassword(byte[] password) {
+        this.password = password;
+    }
+
+    public String getInterests() {
+        return interests;
+    }
+
+    public void setInterests(String interests) {
+        this.interests = interests;
+    }
+
+    public Date getCreateDate() {
+        return createDate;
+    }
+
+    public void setCreateDate(Date createDate) {
+        this.createDate = createDate;
+    }
+
+    public Date getLcts() {
+        return lcts;
+    }
+
+    public void setLcts(Date lcts) {
+        this.lcts = lcts;
+    }
 }

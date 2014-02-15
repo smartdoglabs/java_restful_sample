@@ -8,5 +8,6 @@ import com.flocasts.model.User;
 public interface UserRepository {
 
     public User save(User user);
+    public void update(User user);
     public User loadById(Integer id);
 }

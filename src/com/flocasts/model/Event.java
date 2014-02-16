@@ -11,7 +11,7 @@ import java.util.Date;
  * Date: 2/9/14
  * Time: 7:59 PM
  *
- * The VideoEvent class holds the data about a particular video event that occurred in the system.
+ * The Event class holds the data about a particular video event that occurred in the system.
  * We could have made this more generic and called it Event, but for the purpose of this exercise I
  * will just focus it on videos.
  *
@@ -21,7 +21,7 @@ import java.util.Date;
 @Entity
 @Table(name="event")
 @XmlRootElement(name="event")
-public class  VideoEvent {
+public class Event {
 
     /**
      * The event ID.
@@ -48,7 +48,7 @@ public class  VideoEvent {
     @Column(name="channel")
     private String channel;
 
-    @Column(name="attributes")
+    @Column(name="attributes",columnDefinition = "mediumtext")
     private String attributes;
 
     /**
@@ -56,7 +56,7 @@ public class  VideoEvent {
      * of recommended videos, and a user clicks on it, then the LOAD event and any subsequent event will have this flag
      * set as true. The attributes column will have more information about who recommended this.
      */
-    @Column(name="from_recommendation")
+    @Column(name="from_recommendation",columnDefinition = "bit")
     private Boolean fromRecommendation;
 
     /**

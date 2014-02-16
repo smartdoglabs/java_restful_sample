@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `flocasts`.`user` (
   `password` BLOB NULL,
   `interests` MEDIUMTEXT NULL,
   `create_date` DATETIME NULL,
-  `lcts` VARCHAR(45) NULL,
+  `lcts` TIMESTAMP NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 

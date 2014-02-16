@@ -1,7 +1,7 @@
 package com.flocasts.client;
 
 import com.flocasts.model.Event;
-import com.flocasts.model.EventType;
+import com.flocasts.model.Video;
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
@@ -14,19 +14,23 @@ import java.util.Date;
 /**
  * Created by joserubio on 2/15/14.
  */
-public class EventTestClient {
+public class VideoTestClient {
 
     public static void main(String[] args) {
 
         try {
 
-            Event ev = new Event();
+            Video vid = new Video();
 
-            ev.setSessionId("12345");
-            ev.setUserId(1);
-            ev.setVideoId(1);
-            ev.setType(EventType.LOAD);
-            ev.setTimestamp(new Date());
+            vid.setTitle("Workout Wednesday");
+            vid.setChannels("flotrack");
+            vid.setUrl("http://www.youtube.com/watch?v=JoqS4aMOwy0");
+            vid.setTags("track,workout,ncaa");
+            vid.setCategories("workout,track");
+            vid.setIsActive(true);
+            vid.setCreateDate(new Date());
+            vid.setLcts(new Date());
+
 
 
             ClientConfig clientConfig = new DefaultClientConfig();
@@ -37,9 +41,9 @@ public class EventTestClient {
 
             Client client = Client.create(clientConfig);
 
-            WebResource webResource = client.resource("http://localhost:9998/events");
+            WebResource webResource = client.resource("http://localhost:9998/videos");
 
-            ClientResponse response = webResource.accept("application/json").type("application/json").post(ClientResponse.class, ev);
+            ClientResponse response = webResource.accept("application/json").type("application/json").post(ClientResponse.class, vid);
 
             if (response.getStatus() != 200) {
 

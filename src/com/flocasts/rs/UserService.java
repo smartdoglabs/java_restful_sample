@@ -1,14 +1,18 @@
 package com.flocasts.rs;
 
+import com.flocasts.dao.EventRepository;
 import com.flocasts.dao.UserRepository;
+import com.flocasts.dao.impl.EventRepositoryHibernateImpl;
 import com.flocasts.dao.impl.UserRepositoryHibernateImpl;
 import com.flocasts.model.User;
 import com.flocasts.model.Video;
-import com.flocasts.model.VideoEvent;
-import com.flocasts.util.HibernateUtil;
+import com.flocasts.model.Event;
+import com.flocasts.model.validator.UserValidator;
+import com.flocasts.model.validator.VideoValidator;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -25,13 +29,19 @@ public class UserService {
 
     private static final Logger log = Logger.getLogger(UserService.class.getName());
 
-    private final UserRepository repo = new UserRepositoryHibernateImpl();
+    private final UserRepository userRepo = new UserRepositoryHibernateImpl();
+    private final EventRepository eventRepo = new EventRepositoryHibernateImpl();
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public List<User> getUsers(@QueryParam("id") Integer userId) {
+    public List<User> getUsers() {
 
-       return null;
+        log.info("Entering call to getUserActivity");
+
+        //Grab the user list from the UserRepository
+        List<User> users = userRepo.loadAll();
+
+        return users;
     }
 
     @GET
@@ -44,7 +54,7 @@ public class UserService {
         User theUser = null;
 
         if( userId != null ) {
-            theUser = repo.loadById(userId);
+            theUser = userRepo.loadById(userId);
         }
 
         return theUser;
@@ -61,11 +71,15 @@ public class UserService {
     @GET
     @Path("{id}/activity")
     @Produces(MediaType.APPLICATION_JSON)
-    public List<VideoEvent> getUserActivity(@PathParam("id") Integer userId, @QueryParam("type") String eventType ){
+    public List<Event> getUserActivity(@PathParam("id") Integer userId, @QueryParam("type") String eventType ){
 
         log.info("Entering call to getUserActivity");
 
-        return null;
+        //The user activity can be accessed through the EventService. In this prototype, we are going to
+        //go and grab it from the EventRepository directly
+        List<Event> events = eventRepo.loadByUserId(userId,eventType);
+
+        return events;
     }
 
     /**
@@ -93,6 +107,28 @@ public class UserService {
 
 
         return null;
+    }
+
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response addUser(User user) {
+
+        log.info("Entering call to addVideoEvent");
+
+        //Check that the event is valid
+        if(user != null && UserValidator.isValid(user) ) {
+
+            //User has all the data, save it in the DB
+            userRepo.save(user);
+
+            return Response.status(200).entity("User stored on the server.").build();
+
+        }
+        else {
+
+            return Response.status(400).entity("User submitted is not valid. Please check your request.").build();
+
+        }
     }
 
 }

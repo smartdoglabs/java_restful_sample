@@ -1,7 +1,7 @@
 package com.flocasts.client;
 
-import com.flocasts.model.Event;
-import com.flocasts.model.EventType;
+import com.flocasts.model.User;
+import com.flocasts.model.Video;
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
@@ -14,19 +14,21 @@ import java.util.Date;
 /**
  * Created by joserubio on 2/15/14.
  */
-public class EventTestClient {
+public class UserTestClient {
 
     public static void main(String[] args) {
 
         try {
 
-            Event ev = new Event();
+            User user = new User();
 
-            ev.setSessionId("12345");
-            ev.setUserId(1);
-            ev.setVideoId(1);
-            ev.setType(EventType.LOAD);
-            ev.setTimestamp(new Date());
+            user.setFirstName("Ana");
+            user.setLastName("Torres");
+            user.setEmailAddress("anatorresdds@gmail.com");
+            user.setInterests("volleyball,gymnastics");
+            user.setCreateDate(new Date());
+            user.setLcts(new Date());
+
 
 
             ClientConfig clientConfig = new DefaultClientConfig();
@@ -37,9 +39,9 @@ public class EventTestClient {
 
             Client client = Client.create(clientConfig);
 
-            WebResource webResource = client.resource("http://localhost:9998/events");
+            WebResource webResource = client.resource("http://localhost:9998/users");
 
-            ClientResponse response = webResource.accept("application/json").type("application/json").post(ClientResponse.class, ev);
+            ClientResponse response = webResource.accept("application/json").type("application/json").post(ClientResponse.class, user);
 
             if (response.getStatus() != 200) {
 

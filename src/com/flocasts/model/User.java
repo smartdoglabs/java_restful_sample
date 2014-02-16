@@ -30,10 +30,13 @@ public class User {
     @Column(name="last_name")
     private String lastName;
 
-    @Column(name="password")
+    @Column(name="email_address")
+    private String emailAddress;
+
+    @Column(name="password",columnDefinition = "blob")
     private byte[] password;
 
-    @Column(name="interests")
+    @Column(name="interests",columnDefinition = "mediumtext")
     private String interests;
 
     @Column(name="create_date")
@@ -101,4 +104,13 @@ public class User {
     public void setLcts(Date lcts) {
         this.lcts = lcts;
     }
+
+    public String getEmailAddress() {
+        return emailAddress;
+    }
+
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
+    }
+
 }

@@ -1,8 +1,8 @@
 package com.flocasts.dao.impl;
 
-import com.flocasts.dao.UserRepository;
-import com.flocasts.model.EventType;
-import com.flocasts.model.User;
+
+import com.flocasts.dao.VideoRepository;
+import com.flocasts.model.Video;
 import com.flocasts.util.HibernateUtil;
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -13,38 +13,38 @@ import java.util.List;
 /**
  * Created by joserubio on 2/14/14.
  */
-public class UserRepositoryHibernateImpl implements UserRepository {
+public class VideoRepositoryHibernateImpl implements VideoRepository {
 
     @Override
-    public User save(User user) {
+    public Video save(Video video) {
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session session = sf.openSession();
         session.beginTransaction();
 
-        Integer id = (Integer) session.save(user);
-        user.setId(id);
+        Integer id = (Integer) session.save(video);
+        video.setId(id);
 
         session.getTransaction().commit();
 
-        user = HibernateUtil.initializeAndUnproxy(user);
+        video = HibernateUtil.initializeAndUnproxy(video);
 
         session.close();
 
-        return user;
+        return video;
 
 
     }
 
     @Override
-    public void update(User user) {
+    public void update(Video video) {
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session session = sf.openSession();
 
         session.beginTransaction();
-        session.update(user);
+        session.update(video);
         session.getTransaction().commit();
 
-        HibernateUtil.initializeAndUnproxy(user);
+        HibernateUtil.initializeAndUnproxy(video);
 
         session.close();
 
@@ -53,25 +53,25 @@ public class UserRepositoryHibernateImpl implements UserRepository {
     }
 
     @Override
-    public User loadById(Integer id) {
+    public Video loadById(Integer id) {
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session session = sf.openSession();
 
         session.beginTransaction();
 
-        User user = (User) session.load(User.class,id);
+        Video video = (Video) session.load(Video.class,id);
 
         session.getTransaction().commit();
 
-        user = HibernateUtil.initializeAndUnproxy(user);
+        video = HibernateUtil.initializeAndUnproxy(video);
 
         session.close();
 
-        return user;
+        return video;
     }
 
     @Override
-    public List<User> loadAll() {
+    public List<Video> loadAll() {
 
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session session = sf.openSession();
@@ -79,7 +79,7 @@ public class UserRepositoryHibernateImpl implements UserRepository {
         session.beginTransaction();
 
 
-        String hql = "FROM User";
+        String hql = "FROM Video";
 
         Query query = session.createQuery(hql);
 

@@ -30,16 +30,16 @@ public class Video {
     @Column(name="length")
     private Integer length; //In seconds
 
-    @Column(name="categories")
+    @Column(name="categories",columnDefinition = "mediumtext")
     private String categories;
 
-    @Column(name="channels")
+    @Column(name="channels",columnDefinition = "mediumtext")
     private String channels;
 
-    @Column(name="tags")
+    @Column(name="tags",columnDefinition = "mediumtext")
     private String tags;
 
-    @Column(name="is_active")
+    @Column(name="is_active",columnDefinition = "bit")
     private Boolean isActive = true;
 
     @Column(name="create_date")

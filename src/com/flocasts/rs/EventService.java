@@ -1,13 +1,16 @@
 package com.flocasts.rs;
 
-import com.flocasts.model.VideoEvent;
-import com.sun.jersey.api.container.httpserver.HttpServerFactory;
-import com.sun.net.httpserver.HttpServer;
+import com.flocasts.dao.EventRepository;
+import com.flocasts.dao.impl.EventRepositoryHibernateImpl;
+import com.flocasts.model.Event;
+import com.flocasts.model.EventType;
+import com.flocasts.model.validator.VideoEventValidator;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -23,14 +26,21 @@ import java.util.logging.Logger;
 public class EventService {
 
     private static final Logger log = Logger.getLogger(EventService.class.getName());
+
+    private final EventRepository repo = new EventRepositoryHibernateImpl();
     @GET
     @Produces("application/json")
-    public List<VideoEvent> getVideoEvents(@QueryParam("type") String eventType,
+    public List<Event> getVideoEvents(@QueryParam("type") String eventType,
                                            @QueryParam("range") String eventRange) {
 
         log.info("Entering call to getVideoEvents");
 
-        return null;
+        if( eventType == null || !EventType.isValidType(eventType) )
+            return new ArrayList<Event>();
+
+        List<Event> events = repo.loadByType(eventType,eventRange);
+
+        return events;
     }
 
     /**
@@ -47,12 +57,32 @@ public class EventService {
      */
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response addVideoEvent(VideoEvent event) {
+    public Response addVideoEvent(Event event) {
 
         log.info("Entering call to addVideoEvent");
 
+        //Check that the event is valid
+        if(event != null && VideoEventValidator.isValid(event) ) {
 
-        return null;
+            //The event is valid! We are good to go.
+
+            //Check the timestamp. If it's not there, we need to default to now.
+            //We don't want to catch this in the validation as we can still process without it.
+            if( event.getTimestamp() == null )
+                event.setTimestamp(new Date());
+
+            //Just send it to the event repository for storage.
+            //In real life this will go into a queue so we can process it later.
+            repo.save(event);
+
+            return Response.status(200).entity("Event posted to the server.").build();
+
+        }
+        else {
+
+            return Response.status(400).entity("Event passed is not valid. Please check your request.").build();
+
+        }
     }
 
 }

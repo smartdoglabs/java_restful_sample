@@ -9,6 +9,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.io.IOException;
 import java.util.List;
+import java.util.logging.Logger;
 
 /**
  * Created with IntelliJ IDEA.
@@ -21,10 +22,13 @@ import java.util.List;
 @Path("/events")
 public class EventService {
 
+    private static final Logger log = Logger.getLogger(EventService.class.getName());
     @GET
     @Produces("application/json")
     public List<VideoEvent> getVideoEvents(@QueryParam("type") String eventType,
                                            @QueryParam("range") String eventRange) {
+
+        log.info("Entering call to getVideoEvents");
 
         return null;
     }
@@ -44,6 +48,8 @@ public class EventService {
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     public Response addVideoEvent(VideoEvent event) {
+
+        log.info("Entering call to addVideoEvent");
 
 
         return null;

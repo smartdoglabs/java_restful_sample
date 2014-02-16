@@ -17,7 +17,12 @@ public class EventTestClient {
 
         try {
 
-            VideoEvent st = new VideoEvent();
+            VideoEvent ev = new VideoEvent();
+
+            ev.setSessionId("12345");
+            ev.setUserId(1);
+            ev.setVideoId(1);
+
 
             ClientConfig clientConfig = new DefaultClientConfig();
 
@@ -27,9 +32,9 @@ public class EventTestClient {
 
             Client client = Client.create(clientConfig);
 
-            WebResource webResource = client.resource("http://localhost:9090/JerseyJSONExample/rest/jsonServices/send");
+            WebResource webResource = client.resource("http://localhost:9998/events");
 
-            ClientResponse response = webResource.accept("application/json").type("application/json").post(ClientResponse.class, st);
+            ClientResponse response = webResource.accept("application/json").type("application/json").post(ClientResponse.class, ev);
 
             if (response.getStatus() != 200) {
 

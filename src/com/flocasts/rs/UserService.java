@@ -23,7 +23,7 @@ import java.util.logging.Logger;
 @Path("/users")
 public class UserService {
 
-    private static final Logger log = Logger.getLogger(VideoService.class.getName());
+    private static final Logger log = Logger.getLogger(UserService.class.getName());
 
     private final UserRepository repo = new UserRepositoryHibernateImpl();
 
@@ -89,7 +89,8 @@ public class UserService {
                                                @QueryParam("videoId") Integer videoId,
                                                @QueryParam("channel") String channel ) {
 
-        log.info("Entering call to getVideoRecommendations");
+
+
 
         return null;
     }

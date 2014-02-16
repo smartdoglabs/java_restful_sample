@@ -11,18 +11,18 @@ And now the basic component model we will use here. The main services to be expo
 
 Here are the specs for the RESTful service calls and the HTTP methods they support:
 
-User Service:
+User Service:<br/>
 https://api.mydomain.com/users                        GET,POST<br/>
 https://api.mydomain.com/users/{id}                   GET<br/>
 https://api.mydomain.com/users/{id}/activity          GET<br/>
 https://api.mydomain.com/users/{id}/recommendations   GET<br/>
 
-Video Service:
+Video Service:<br/>
 https://api.mydomain.com/videos               GET,POST<br/>
 https://api.mydomain.com/videos/{id}          GET<br/>
 https://api.mydomain.com/videos/{id}/activity GET<br/>
 https://api.mydomain.com/videos/{id}/stats    GET<br/>
 https://api.mydomain.com/videos/{id}/similar  GET<br/>
 
-Event Service:
+Event Service:<br/>
 https://api.mydomain.com/events               GET,POST<br/>

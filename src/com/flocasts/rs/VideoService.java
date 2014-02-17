@@ -3,6 +3,7 @@ import com.flocasts.dao.EventRepository;
 import com.flocasts.dao.VideoRepository;
 import com.flocasts.dao.impl.EventRepositoryHibernateImpl;
 import com.flocasts.dao.impl.VideoRepositoryHibernateImpl;
+import com.flocasts.engine.RecommendationEngine;
 import com.flocasts.model.Event;
 import com.flocasts.model.Video;
 import com.flocasts.model.validator.VideoEventValidator;
@@ -75,21 +76,23 @@ public class VideoService {
     @GET
     @Path("{id}/stats")
     @Produces(MediaType.APPLICATION_JSON)
-    public String getVideoStatistics(@PathParam("id") Integer videoId, @QueryParam("range") String statRange ){
+    public Response getVideoStatistics(@PathParam("id") Integer videoId, @QueryParam("range") String statRange ){
 
-        log.info("Entering call to getVideoActivity");
+        log.info("Entering call to getVideoStatistics");
 
-        return null;
+        return Response.status(501).entity("Video statistics are not supported yet.").build();
     }
 
     @GET
     @Path("{id}/similar")
     @Produces(MediaType.APPLICATION_JSON)
-    public List<Video> getSimilarVideos(@PathParam("id") Integer videoId, @QueryParam("range") String statRange ){
+    public List<Video> getSimilarVideos(@PathParam("id") Integer videoId ){
 
-        log.info("Entering call to getVideoActivity");
+        log.info("Entering call to getSimilarVideos");
 
-        return null;
+        List<Video> videos = RecommendationEngine.INSTANCE.getRecommendations(null,videoId, null);
+
+        return videos;
     }
 
     @POST

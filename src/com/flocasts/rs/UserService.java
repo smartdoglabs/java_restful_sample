@@ -4,6 +4,7 @@ import com.flocasts.dao.EventRepository;
 import com.flocasts.dao.UserRepository;
 import com.flocasts.dao.impl.EventRepositoryHibernateImpl;
 import com.flocasts.dao.impl.UserRepositoryHibernateImpl;
+import com.flocasts.engine.RecommendationEngine;
 import com.flocasts.model.User;
 import com.flocasts.model.Video;
 import com.flocasts.model.Event;
@@ -103,10 +104,11 @@ public class UserService {
                                                @QueryParam("videoId") Integer videoId,
                                                @QueryParam("channel") String channel ) {
 
+        log.info("Entering call to getVideoRecommendations");
 
+        List<Video> videos = RecommendationEngine.INSTANCE.getRecommendations(userId, videoId, channel);
 
-
-        return null;
+        return videos;
     }
 
     @POST

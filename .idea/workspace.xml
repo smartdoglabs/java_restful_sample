@@ -2,31 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f96d599-efa7-47b1-92d5-fa4042dbca00" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/flocasts/dao/EventRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/flocasts/dao/impl/EventRepositoryHibernateImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/com/flocasts/client/UserTestClient.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/flocasts/model/validator/UserValidator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/flocasts/dao/VideoRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/flocasts/dao/impl/VideoRepositoryHibernateImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/com/flocasts/client/VideoTestClient.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/flocasts/model/validator/VideoValidator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/flocasts/model/VideoEvent.java" afterPath="$PROJECT_DIR$/src/com/flocasts/model/Event.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flocasts.mwb.bak" afterPath="$PROJECT_DIR$/flocasts.mwb.bak" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flocasts.mwb" afterPath="$PROJECT_DIR$/flocasts.mwb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flocasts_model.png" afterPath="$PROJECT_DIR$/flocasts_model.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/flocasts/rs/EventService.java" afterPath="$PROJECT_DIR$/src/com/flocasts/rs/EventService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/com/flocasts/client/EventTestClient.java" afterPath="$PROJECT_DIR$/test/com/flocasts/client/EventTestClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/flocasts/model/EventType.java" afterPath="$PROJECT_DIR$/src/com/flocasts/model/EventType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/flocasts/model/User.java" afterPath="$PROJECT_DIR$/src/com/flocasts/model/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/flocasts/dao/UserRepository.java" afterPath="$PROJECT_DIR$/src/com/flocasts/dao/UserRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/flocasts/dao/impl/UserRepositoryHibernateImpl.java" afterPath="$PROJECT_DIR$/src/com/flocasts/dao/impl/UserRepositoryHibernateImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/flocasts/engine/RecommendationEngine.java" afterPath="$PROJECT_DIR$/src/com/flocasts/engine/RecommendationEngine.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/flocasts/rs/UserService.java" afterPath="$PROJECT_DIR$/src/com/flocasts/rs/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/flocasts/model/Video.java" afterPath="$PROJECT_DIR$/src/com/flocasts/model/Video.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/com/flocasts/model/VideoEvent.html" afterPath="$PROJECT_DIR$/docs/com/flocasts/model/VideoEvent.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/flocasts/model/validator/VideoEventValidator.java" afterPath="$PROJECT_DIR$/src/com/flocasts/model/validator/VideoEventValidator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/flocasts/rs/VideoService.java" afterPath="$PROJECT_DIR$/src/com/flocasts/rs/VideoService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flocasts_ddl.sql" afterPath="$PROJECT_DIR$/flocasts_ddl.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/src/hibernate.cfg.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="soccer.iws" />
@@ -126,7 +104,7 @@
       <file leaf-file-name="EventRepositoryHibernateImpl.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/flocasts/dao/impl/EventRepositoryHibernateImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="116" column="0" selection-start="2915" selection-end="2915" vertical-scroll-proportion="0.0" vertical-offset="1356" max-vertical-offset="2325">
+            <state line="116" column="0" selection-start="2915" selection-end="2915" vertical-scroll-proportion="0.0" vertical-offset="1740" max-vertical-offset="2475">
               <folding />
             </state>
           </provider>
@@ -144,7 +122,7 @@
       <file leaf-file-name="UserRepositoryHibernateImpl.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/flocasts/dao/impl/UserRepositoryHibernateImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="5" selection-start="1624" selection-end="2022" vertical-scroll-proportion="0.0" vertical-offset="868" max-vertical-offset="1395">
+            <state line="92" column="5" selection-start="1624" selection-end="2022" vertical-scroll-proportion="0.0" vertical-offset="1380" max-vertical-offset="1515">
               <folding />
             </state>
           </provider>
@@ -154,9 +132,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/flocasts/dao/VideoRepository.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="15" column="0" selection-start="311" selection-end="311" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -164,17 +140,19 @@
       <file leaf-file-name="VideoService.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/flocasts/rs/VideoService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="16" selection-start="601" selection-end="601" vertical-scroll-proportion="-2.0654762" vertical-offset="1116" max-vertical-offset="1620">
+            <state line="82" column="82" selection-start="2609" selection-end="2609" vertical-scroll-proportion="-0.27722773" vertical-offset="1145" max-vertical-offset="1650">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EventTestClient.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/com/flocasts/client/EventTestClient.java">
+      <file leaf-file-name="RecommendationEngine.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/flocasts/engine/RecommendationEngine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="38" selection-start="775" selection-end="775" vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="1035">
-              <folding />
+            <state line="16" column="11" selection-start="287" selection-end="287" vertical-scroll-proportion="0.0" vertical-offset="65" max-vertical-offset="570">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -182,7 +160,7 @@
       <file leaf-file-name="EventRepository.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/flocasts/dao/EventRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="65" selection-start="379" selection-end="440" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+            <state line="16" column="65" selection-start="379" selection-end="440" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="405">
               <folding />
             </state>
           </provider>
@@ -191,10 +169,8 @@
       <file leaf-file-name="VideoRepositoryHibernateImpl.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/flocasts/dao/impl/VideoRepositoryHibernateImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1515">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="2" column="0" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="1515">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -250,13 +226,14 @@
         <option value="$PROJECT_DIR$/test/com/flocasts/client/EventTestClient.java" />
         <option value="$PROJECT_DIR$/src/com/flocasts/dao/UserRepository.java" />
         <option value="$PROJECT_DIR$/src/com/flocasts/dao/impl/UserRepositoryHibernateImpl.java" />
-        <option value="$PROJECT_DIR$/src/com/flocasts/rs/UserService.java" />
         <option value="$PROJECT_DIR$/test/com/flocasts/client/UserTestClient.java" />
         <option value="$PROJECT_DIR$/src/com/flocasts/rs/EventService.java" />
         <option value="$PROJECT_DIR$/src/com/flocasts/dao/EventRepository.java" />
         <option value="$PROJECT_DIR$/src/com/flocasts/dao/impl/EventRepositoryHibernateImpl.java" />
         <option value="$PROJECT_DIR$/src/com/flocasts/dao/VideoRepository.java" />
         <option value="$PROJECT_DIR$/src/com/flocasts/dao/impl/VideoRepositoryHibernateImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/flocasts/rs/UserService.java" />
+        <option value="$PROJECT_DIR$/src/com/flocasts/engine/RecommendationEngine.java" />
         <option value="$PROJECT_DIR$/src/com/flocasts/rs/VideoService.java" />
       </list>
     </option>
@@ -310,7 +287,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -470,6 +446,10 @@
               <option name="myItemId" value="flocasts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -519,8 +499,27 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="soccer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sports" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="flocasts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -646,6 +645,19 @@
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -672,19 +684,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -796,16 +795,17 @@
       <workItem from="1392585898818" duration="1538000" />
       <workItem from="1392587753500" duration="1633000" />
       <workItem from="1392589638406" duration="1812000" />
-      <workItem from="1392591467381" duration="483000" />
+      <workItem from="1392591467381" duration="1112000" />
+      <workItem from="1392607543554" duration="1763000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28467000" />
+    <option name="totallyTimeSpent" value="30859000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1680" height="1024" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289183" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -816,7 +816,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38741723" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38631347" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -832,8 +832,8 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32119206" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Atlassian " active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289183" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -883,10 +883,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="17" selection-start="200" selection-end="200" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="255">
           <folding>
-            <element signature="e#2023#2024#0" expanded="true" />
-            <element signature="e#2058#2059#0" expanded="true" />
-            <element signature="e#2114#2115#0" expanded="true" />
-            <element signature="e#2162#2163#0" expanded="true" />
+            <element signature="e#2023#2024#0" expanded="false" />
+            <element signature="e#2058#2059#0" expanded="false" />
+            <element signature="e#2114#2115#0" expanded="false" />
+            <element signature="e#2162#2163#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -925,9 +925,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/flocasts/rs/EventService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="14" selection-start="473" selection-end="473" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="540">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -942,10 +940,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="17" selection-start="200" selection-end="200" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="255">
           <folding>
-            <element signature="e#2023#2024#0" expanded="true" />
-            <element signature="e#2058#2059#0" expanded="true" />
-            <element signature="e#2114#2115#0" expanded="true" />
-            <element signature="e#2162#2163#0" expanded="true" />
+            <element signature="e#2023#2024#0" expanded="false" />
+            <element signature="e#2058#2059#0" expanded="false" />
+            <element signature="e#2114#2115#0" expanded="false" />
+            <element signature="e#2162#2163#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -984,9 +982,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/flocasts/rs/EventService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="14" selection-start="473" selection-end="473" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="540">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1001,10 +997,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="17" selection-start="200" selection-end="200" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="255">
           <folding>
-            <element signature="e#2023#2024#0" expanded="true" />
-            <element signature="e#2058#2059#0" expanded="true" />
-            <element signature="e#2114#2115#0" expanded="true" />
-            <element signature="e#2162#2163#0" expanded="true" />
+            <element signature="e#2023#2024#0" expanded="false" />
+            <element signature="e#2058#2059#0" expanded="false" />
+            <element signature="e#2114#2115#0" expanded="false" />
+            <element signature="e#2162#2163#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1024,9 +1020,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/flocasts/rs/EventService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="14" selection-start="473" selection-end="473" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1053,10 +1047,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="17" selection-start="200" selection-end="200" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding>
-            <element signature="e#2023#2024#0" expanded="true" />
-            <element signature="e#2058#2059#0" expanded="true" />
-            <element signature="e#2114#2115#0" expanded="true" />
-            <element signature="e#2162#2163#0" expanded="true" />
+            <element signature="e#2023#2024#0" expanded="false" />
+            <element signature="e#2058#2059#0" expanded="false" />
+            <element signature="e#2114#2115#0" expanded="false" />
+            <element signature="e#2162#2163#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1081,11 +1075,6 @@
     <entry file="jar://$PROJECT_DIR$/lib/jersey-core-1.12.jar!/javax/ws/rs/core/MediaType.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="41" selection-start="1394" selection-end="1394" vertical-scroll-proportion="0.34254807" vertical-offset="45" max-vertical-offset="1020" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/flocasts/engine/RecommendationEngine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="33" selection-start="107" selection-end="107" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -1149,10 +1138,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="114" column="0" selection-start="2164" selection-end="2164" vertical-scroll-proportion="0.0" vertical-offset="742" max-vertical-offset="1335">
           <folding>
-            <element signature="e#2023#2024#0" expanded="true" />
-            <element signature="e#2058#2059#0" expanded="true" />
-            <element signature="e#2114#2115#0" expanded="true" />
-            <element signature="e#2162#2163#0" expanded="true" />
+            <element signature="e#2023#2024#0" expanded="false" />
+            <element signature="e#2058#2059#0" expanded="false" />
+            <element signature="e#2114#2115#0" expanded="false" />
+            <element signature="e#2162#2163#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1185,15 +1174,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/flocasts/rs/EventService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="1023" selection-end="1023" vertical-scroll-proportion="0.6126021" vertical-offset="0" max-vertical-offset="1395">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/flocasts/dao/EventRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="65" selection-start="379" selection-end="440" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
@@ -1208,13 +1188,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/flocasts/rs/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="70" selection-start="2010" selection-end="2237" vertical-scroll-proportion="0.20833333" vertical-offset="870" max-vertical-offset="1875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/flocasts/dao/impl/UserRepositoryHibernateImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="92" column="5" selection-start="1624" selection-end="2022" vertical-scroll-proportion="0.0" vertical-offset="868" max-vertical-offset="1395">
@@ -1225,24 +1198,43 @@
     <entry file="file://$PROJECT_DIR$/src/com/flocasts/dao/impl/VideoRepositoryHibernateImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="0" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1515">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/flocasts/dao/VideoRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="0" selection-start="311" selection-end="311" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/flocasts/rs/EventService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="85" selection-start="658" selection-end="739" vertical-scroll-proportion="0.2631579" vertical-offset="0" max-vertical-offset="1215">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/flocasts/engine/RecommendationEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="11" selection-start="287" selection-end="287" vertical-scroll-proportion="0.0" vertical-offset="65" max-vertical-offset="570">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/flocasts/rs/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="112" column="0" selection-start="3447" selection-end="3447" vertical-scroll-proportion="0.5108911" vertical-offset="1197" max-vertical-offset="1890">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/flocasts/rs/VideoService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="16" selection-start="601" selection-end="601" vertical-scroll-proportion="-2.0654762" vertical-offset="1116" max-vertical-offset="1620">
+        <state line="82" column="82" selection-start="2609" selection-end="2609" vertical-scroll-proportion="-0.27722773" vertical-offset="1145" max-vertical-offset="1650">
           <folding />
         </state>
       </provider>
